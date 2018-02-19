@@ -26,7 +26,6 @@ def home():
 def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
-<<<<<<< HEAD
     
 @app.route('/contact', methods = ['GET','POST'])
 def contact():
@@ -46,32 +45,11 @@ def contact():
     return render_template('contact.html',form = form)
 
  
-=======
-
->>>>>>> 2d5544afecf55e3ba64dfccf3619355def35881a
 
 ###
 # The functions below should be applicable to all Flask apps.
 ###
 
-<<<<<<< HEAD
-=======
-@app.route('/contact', methods = ['GET','POST'])
-def contact():
-    form = myForm()
-    if form.validate_on_submit():
-        name = myForm.name.data
-        email = myForm.email.data
-        subject = myForm.subject.data
-        message = myForm.message.data
-        msg	=	Message(subject, sender=(name,email), recipients = ["test@example.com"])
-        msg.body =  form.msg.data
-        mail.send(msg)
-        flash("Message Sent Succesfully!")
-        return redirect('/')
-        
-    return render_template('contact.html',form = form)
->>>>>>> 2d5544afecf55e3ba64dfccf3619355def35881a
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
