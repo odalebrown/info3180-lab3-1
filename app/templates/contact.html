@@ -8,6 +8,7 @@
     <form method="POST" action="{{ url_for('contact') }}">
         {{ form.csrf_token }}
         <div class="form-group">
+<<<<<<< HEAD
         <p><strong>Name </strong><span style="color:red">(Required)</span></p>
         {{ form.name.label }} {{ form.name(class="form-control") }}
         
@@ -27,5 +28,26 @@
         {{ form.message.label }} {{ form.message(class="form-control") }}
         </div>
     <button type="button">Send</button>
+=======
+            {{ form.name.label }} {{ form.firstname(class="form-control") }}
+        <p><strong>Name </strong><span style="color:red">(Required)</span></p>
+        
+        </div>
+        <div class="form-group">
+            {{ form.email.label }} {{ form.email(class="form-control", placeholder="to@example.com") }}
+        <p><strong>Email</strong> <span style="color:red">(Required)</span></p>
+        
+        </div>
+        <div class="form-group">
+            {{ form.subject.label }} {{ form.subject(class="form-control") }}
+        <p><strong>Subject</strong> </strong> <span style="color:red">(Required)</span></p>
+        
+        </div>
+        <div class="form-group">
+            {{ form.message.label }} {{ form.message(class="form-control") }}
+        <p><strong>Message</strong> <span style="color:red">(Required)</span></p>
+        </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+>>>>>>> 2d5544afecf55e3ba64dfccf3619355def35881a
 </form>
 {% endblock %}
